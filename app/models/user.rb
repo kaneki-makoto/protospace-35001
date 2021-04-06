@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_may :prototypes
+  has_many :prototypes
 
   validates :name, :profile, :occupation, :position, presence: true
 end
